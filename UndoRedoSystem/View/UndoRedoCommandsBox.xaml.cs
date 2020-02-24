@@ -41,6 +41,9 @@ namespace UndoRedoSystem.View
 
         public static bool GetUndoRedoPreviousCommandSelected(DependencyObject obj)
         {
+            if (obj == null)
+                return false;
+
             return (bool)obj.GetValue(UndoRedoPreviousCommandSelectedProperty);
         }
         public static void SetUndoRedoPreviousCommandSelected(DependencyObject obj, bool value)
